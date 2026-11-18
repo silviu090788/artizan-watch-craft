@@ -1,16 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import lunar from "@/assets/ceas-lunar.jpg.asset.json";
+import logo from "@/assets/craterhand-logo.png.asset.json";
 import { WhatsAppIcon, WhatsAppSticky } from "@/components/WhatsAppButton";
 import { waLink } from "@/lib/site";
 
 export const Route = createFileRoute("/review")({
   head: () => ({
     meta: [
-      { title: "Lasă o recenzie | Lunaris Atelier" },
-      { name: "description", content: "Spune-ne cum arată ceasul tău Lunaris acasă. Recenzia ta ne ajută enorm." },
-      { property: "og:title", content: "Lasă o recenzie | Lunaris Atelier" },
-      { property: "og:description", content: "Spune-ne cum arată ceasul tău Lunaris acasă." },
+      { title: "Lasă o recenzie | Craterhand" },
+      { name: "description", content: "Spune-ne cum arată ceasul tău Craterhand acasă. Recenzia ta ne ajută enorm." },
+      { property: "og:title", content: "Lasă o recenzie | Craterhand" },
+      { property: "og:description", content: "Spune-ne cum arată ceasul tău Craterhand acasă." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -22,13 +22,13 @@ function Review() {
   const [stars, setStars] = useState(5);
   const [name, setName] = useState("");
   const [text, setText] = useState("");
-  const msg = `Recenzie Lunaris ${"★".repeat(stars)}${"☆".repeat(5 - stars)}\nNume: ${name || "-"}\n${text}`;
+  const msg = `Recenzie Craterhand ${"★".repeat(stars)}${"☆".repeat(5 - stars)}\nNume: ${name || "-"}\n${text}`;
 
   return (
-    <div className="min-h-screen bg-background px-6 py-12 text-foreground">
+    <div className="min-h-screen bg-background px-5 py-8 pb-24 md:px-6 md:py-12 text-foreground">
       <div className="mx-auto max-w-lg">
-        <Link to="/" className="font-display text-lg font-extrabold tracking-[0.25em]">LUNARIS</Link>
-        <img src={lunar.url} alt="Ceas Lunaris" className="shadow-glow mx-auto my-10 w-40 rounded-full" />
+        <Link to="/" className="font-display text-lg font-extrabold tracking-[0.25em]">CRATERHAND</Link>
+        <img src={logo.url} alt="Craterhand logo" className="mx-auto my-8 w-32 rounded-full bg-cream p-1 md:my-10 md:w-40" />
         <p className="eyebrow mb-3 text-center">Mulțumim!</p>
         <h1 className="mb-3 text-center text-3xl font-semibold tracking-tight">Cum ți se pare ceasul tău?</h1>
         <p className="mb-8 text-center text-sm text-muted-foreground">Recenzia ta ajută alți oameni să ne descopere.</p>

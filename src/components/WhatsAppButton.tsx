@@ -11,16 +11,16 @@ export function WhatsAppIcon({ className = "h-6 w-6" }: { className?: string }) 
 export function WhatsAppSticky() {
   return (
     <a
-      href={waLink("Bună! Sunt interesat(ă) de un ceas Lunaris.")}
+      href={waLink("Bună! Sunt interesat(ă) de un ceas Craterhand.")}
       target="_blank"
       rel="noreferrer"
       aria-label="Scrie-ne pe WhatsApp"
-      className="group fixed bottom-6 right-6 z-50 flex items-center gap-3"
+      className="group fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex items-center gap-3"
     >
       <span className="hidden rounded-full bg-cream px-4 py-2 text-xs font-bold text-cream-foreground shadow-lg md:block md:opacity-0 md:transition md:group-hover:opacity-100">
         Comandă pe WhatsApp
       </span>
-      <span className="animate-pulse-ring flex h-16 w-16 items-center justify-center rounded-full border-4 border-cream bg-whatsapp text-whatsapp-foreground shadow-xl">
+      <span className="animate-pulse-ring flex h-14 w-14 md:h-16 md:w-16 items-center justify-center rounded-full border-4 border-cream bg-whatsapp text-whatsapp-foreground shadow-xl">
         <WhatsAppIcon className="h-8 w-8" />
       </span>
     </a>
