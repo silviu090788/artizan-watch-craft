@@ -81,10 +81,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Craterhand — Handmade Moon Clocks" },
+      { title: "moonArt — Handmade Moon Clocks" },
       { name: "description", content: "Ceasuri de perete lucrate manual, cu relief lunar și lumină ambientală." },
-      { name: "author", content: "Craterhand" },
-      { property: "og:title", content: "Craterhand — Handmade Moon Clocks" },
+      { name: "author", content: "moonArt" },
+      { property: "og:title", content: "moonArt — Handmade Moon Clocks" },
       { property: "og:description", content: "Ceasuri de perete lucrate manual, cu relief lunar și lumină ambientală." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

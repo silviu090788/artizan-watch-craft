@@ -2,7 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
-import logo from "@/assets/craterhand-logo.png.asset.json";
+const logo = { url: "/moonart-logo.png" };
+const logoFull = { url: "/moonart-logo-full.png" };
 import lunar from "@/assets/ceas-lunar.jpg.asset.json";
 import living from "@/assets/ceas-living.jpg.asset.json";
 import relief from "@/assets/atelier-relief.jpg.asset.json";
@@ -18,9 +19,9 @@ import { waLink } from "@/lib/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Craterhand | Ceasuri de perete handmade" },
+      { title: "moonArt | Ceasuri de perete handmade" },
       { name: "description", content: "Ceasuri de perete lucrate manual în atelier: relief lunar, lumină LED ambientală, piese unice și personalizare." },
-      { property: "og:title", content: "Craterhand | Ceasuri de perete handmade" },
+      { property: "og:title", content: "moonArt | Ceasuri de perete handmade" },
       { property: "og:description", content: "Piese unice, sculptate manual, cu lumină ambientală. Comandă direct pe WhatsApp." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -64,8 +65,8 @@ function Index() {
       <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 md:h-20 md:px-6">
           <a href="#" className="flex min-w-0 items-center gap-3">
-            <img src={logo.url} alt="Craterhand logo" className="h-11 w-11 shrink-0 rounded-full bg-cream p-0.5 md:h-12 md:w-12" />
-            <span className="truncate font-display text-base font-extrabold tracking-[0.2em] md:text-lg">CRATERHAND</span>
+            <img src={logo.url} alt="moonArt logo" className="h-11 w-11 shrink-0 rounded-full bg-cream p-0.5 md:h-12 md:w-12" />
+            <span className="truncate font-display text-base font-extrabold tracking-[0.2em] md:text-lg">moonArt</span>
           </a>
           <div className="hidden gap-8 text-xs font-bold md:flex">
             <a href="#colectie" className="hover:text-primary">Colecție</a>
@@ -111,7 +112,7 @@ function Index() {
             </div>
           </div>
           <div className="bg-moon relative mx-auto flex aspect-square w-full max-w-sm items-center md:max-w-none justify-center rounded-full">
-            <img src={lunar.url} alt="Ceas Craterhand cu relief lunar și lumină caldă" className="animate-float shadow-glow w-[85%] rounded-full" />
+            <img src={lunar.url} alt="Ceas moonArt cu relief lunar și lumină caldă" className="animate-float shadow-glow w-[85%] rounded-full" />
           </div>
         </div>
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 border-y border-border px-5 py-6 text-[11px] md:gap-6 md:px-6 md:text-xs font-bold md:grid-cols-4">
@@ -209,7 +210,7 @@ function Index() {
             <p className="eyebrow mb-3">Părerea ta contează</p>
             <h2 className="mb-4 text-4xl font-semibold tracking-tight">Scanează și lasă-ne o recenzie</h2>
             <p className="mx-auto mb-8 max-w-lg text-muted-foreground md:mx-0">
-              Ai primit un ceas Craterhand? Scanează codul QR cu telefonul și spune-ne cum arată la tine acasă.
+              Ai primit un ceas moonArt? Scanează codul QR cu telefonul și spune-ne cum arată la tine acasă.
             </p>
             <Link to="/review" className="inline-block bg-primary px-7 py-4 text-center text-[11px] font-bold uppercase tracking-wider text-primary-foreground">Scrie o recenzie</Link>
           </div>
@@ -226,8 +227,8 @@ function Index() {
       </section>
 
       <footer className="border-t border-border py-10 pb-24 text-center text-xs text-muted-foreground md:pb-10">
-        <img src={logo.url} alt="" className="mx-auto mb-4 h-14 w-14 rounded-full bg-cream p-0.5" />
-        © {new Date().getFullYear()} Craterhand · Handmade moon clocks
+        <img src={logoFull.url} alt="moonArt — handmade moon clocks" className="mx-auto mb-4 w-24" />
+        © {new Date().getFullYear()} moonArt · Handmade moon clocks
       </footer>
 
       <WhatsAppSticky />

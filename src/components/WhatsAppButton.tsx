@@ -11,7 +11,7 @@ export function WhatsAppIcon({ className = "h-6 w-6" }: { className?: string }) 
 export function WhatsAppSticky() {
   return (
     <a
-      href={waLink("Bună! Sunt interesat(ă) de un ceas Craterhand.")}
+      href={waLink("Bună! Sunt interesat(ă) de un ceas moonArt.")}
       target="_blank"
       rel="noreferrer"
       aria-label="Scrie-ne pe WhatsApp"
